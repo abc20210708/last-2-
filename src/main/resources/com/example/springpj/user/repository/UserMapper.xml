@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.springpj.user.repository.UserMapper">
+
+
+
+
+    <!-- // 회원 등록   -->
+    <insert id="createUser">
+        INSERT INTO cs_user
+        (cs_num, cs_id, pw, cs_name, address, postal_code, phone, gender)
+        VALUES
+        (seq_cs_user.nextval, #{id}, #{pw}, #{name}, #{address}, #{postalCode}, #{phone}, #{gender})
+    </insert>
+
+    <!-- 회원 탈퇴  -->
+    <delete id="deleteUser">
+        DELETE FROM cs_user WHERE cs_id = #{id} AND pw = #{pw}
+    </delete>
+
+
+
+    <!--  회원 수정 -->
+    <update id="updateUser">
+            UPDATE cs_user SET
+            pw = #{pw}, address = #{address}, postal_code = #{postalCode}, phone=#{phone}
+            WHERE cs_num=5
+    </update>
+
+    <!--  회원 목록 조회    -->
+    <resultMap id="userMap" type="com.example.springpj.user.domain.User">
+        <result property="id" column="cs_id" />
+        <result property="name" column="cs_name" />
+        <result property="csNum" column="cs_num" />
+        <result property="postalCode" column="postal_code" />
+    </resultMap>
+
+    <select id="getUser" resultMap="userMap">
+        SELECT * FROM cs_user WHERE cs_num=#{csNum}
+    </select>
+
+    <!-- 회원 공지사항 조회   -->
+    <resultMap id="noticeMap" type="com.example.springpj.notice.domain.Notice">
+        <result property="writer" column="admin_id" />
+        <result property="regDate" column="reg_date" />
+    </resultMap>
+
+    <select id="getNotice" resultMap="noticeMap">
+        SELECT * FROM notice
+    </select>
+
+
+
+
+</mapper>

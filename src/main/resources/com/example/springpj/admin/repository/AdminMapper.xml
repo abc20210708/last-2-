@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.springpj.admin.repository.AdminMapper">
+
+    <!-- 관리자 등록   -->
+    <insert id="createAdmin">
+        INSERT INTO service_admin
+        (admin_id, admin_pw, grade)
+        VALUES
+        (#{adminId}, #{adminPw}, #{grade})
+    </insert>
+
+    <!--  관리자 삭제  -->
+    <delete id="deleteAdmin">
+        DELETE FROM service_admin WHERE admin_id = #{adminId} AND admin_pw = #{adminPw}
+    </delete>
+
+
+    <resultMap id="adminMap" type="com.example.springpj.admin.domain.Admin">
+        <result property="adminId" column="admin_id" />
+        <result property="adminPw" column="admin_pw" />
+    </resultMap>
+
+    <!--  관리자 목록 조회  -->
+    <select id="getAdminList" resultMap="adminMap">
+        SELECT * FROM service_admin
+    </select>
+
+    <!--  회원 목록 조회    -->
+    <resultMap id="userMap" type="com.example.springpj.user.domain.User">
+        <result property="id" column="cs_id" />
+        <result property="name" column="cs_name" />
+        <result property="csNum" column="cs_num" />
+        <result property="postalCode" column="postal_code" />
+    </resultMap>
+
+    <select id="getUserList" resultMap="userMap">
+        SELECT * FROM cs_user
+    </select>
+
+    <resultMap id="requestMap" type="com.example.springpj.request.domain.Request">
+        <result property="asNum" column="as_num" />
+        <result property="csId" column="cs_id" />
+        <result property="productName" column="product_name" />
+        <result property="asChoice" column="as_choice" />
+        <result property="asComment" column="as_comment" />
+        <result property="asDate" column="as_date" />
+    </resultMap>
+
+    <!-- AS 목록 조회   -->
+    <select id="getRequestList" resultMap="requestMap">
+        SELECT * FROM as_apply
+    </select>
+
+
+    <!-- 회원 목록 상세 조회   -->
+    <select id="getUserContent" resultMap="userMap">
+        SELECT * FROM cs_user WHERE cs_num = #{csNum}
+    </select>
+
+    <!-- AS 목록  상세 조회   -->
+    <select id="getRequestContent" resultMap="requestMap">
+        SELECT * FROM as_apply WHERE as_num = #{asNum}
+    </select>
+
+    <!-- 공지사항 목록 조회 -->
+    <resultMap id="noticeMap" type="com.example.springpj.notice.domain.Notice">
+        <result property="writer" column="admin_id" />
+        <result property="regDate" column="reg_date" />
+    </resultMap>
+
+    <select id="getNoticeList" resultMap="noticeMap">
+        SELECT * FROM notice
+            ORDER BY bno DESC
+    </select>
+
+
+    <!-- 공지사항 게시물 삭제-->
+    <delete id="deleteNotice">
+        DELETE FROM notice
+        WHERE bno = #{bno}
+    </delete>
+
+    <!-- 공지사항 게시물 수정-->
+    <update id="updateNotice">
+        UPDATE notice SET
+            admin_id=#{writer}, title=#{title}
+                        , content=#{content}
+        WHERE bno = #{bno}
+    </update>
+
+</mapper>
+

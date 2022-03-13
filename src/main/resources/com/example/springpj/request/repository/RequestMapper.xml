@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.springpj.request.repository.RequestMapper">
+
+
+
+    <!-- AS 신청    -->
+    <insert id="insertRequest">
+        INSERT INTO as_apply (as_num, cs_id, product_name, amount, as_choice, as_comment)
+        VALUES
+        (seq_as_apply.nextval, #{csId}, #{productName}, #{amount}, #{asChoice}, #{asComment})
+    </insert>
+
+
+</mapper>
