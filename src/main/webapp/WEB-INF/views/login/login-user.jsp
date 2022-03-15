@@ -118,11 +118,11 @@
 
     <script>
         // 로그인 버튼
-        const $loginBtn = document.getElementById('loginBtn');
+      //  const $loginBtn = document.getElementById('loginBtn');
 
-        $loginBtn.onclick = e => {
-            location.href = '/user/modify?id=${id}';
-        };
+     //   $loginBtn.onclick = e => {
+       //     location.href = '/user/modify';
+        //};
 
         const msg = '${msg}';
         if (msg === 'NO_ID') {

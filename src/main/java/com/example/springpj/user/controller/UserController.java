@@ -62,20 +62,19 @@ public class UserController {
     //회원의 정보 상세 보기
     @GetMapping("/modify")
     public String content(Model model, String id) {
-        User user5 = userService.getUser(id);
-        model.addAttribute("u",user5);
+        User loginUser = userService.getUser(id);
+        model.addAttribute("u",loginUser);
         log.info("수정 화면 요청!");
-        log.info(user5);
-
+        log.info(loginUser);
         return "user/modify";
     }
 
     @PostMapping("/modify")
-    public String content(Model model, ModUser user) {
-        User user5 = userService.getUser(user.getPw());
-        model.addAttribute("u",user5);
+    public String content(Model model,User user, ModUser modUser) {
+        User loginUser = userService.getUser(user.getPw());
+        model.addAttribute("u",loginUser);
         log.info("수정 요청!");
-        userService.updateUser(user);
+        userService.updateUser(modUser);
         log.info(user);
         return "redirect:/user/modify";
     }
