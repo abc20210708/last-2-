@@ -131,7 +131,7 @@
                 <div class="d-flex align-items-center">
                     <a href="#" class="btn btn-primary text-secondary mr-3" data-toggle="modal"
                         data-target="#modal-form-signup"><i class="fas fa-user-edit mr-2"></i> 내정보</a>
-                    <a href="/main/index" class="btn btn-primary d-none d-md-inline-block"><i class="fas fa-sign-in-alt"></i>
+                    <a href="/main/index" id="logout" onclick="alert('로그아웃 되었습니다.\n 이용해주셔서 감사합니다 :)')" class="btn btn-primary d-none d-md-inline-block"><i class="fas fa-sign-in-alt"></i>
                         로그아웃</a>
                 </div>
             </div>
@@ -511,6 +511,9 @@
         $asBtn.onclick = e => {
             location.href = '/request/request';
         };
+
+     
+
     </script>
 </body>
 
