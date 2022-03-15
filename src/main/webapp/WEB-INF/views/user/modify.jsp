@@ -155,7 +155,7 @@
                             <div class="card-body">
                                 <form action="/user/modify" method="post">
                                     <!-- 사용자 몰래 보내기 -->
-                                    <input type="hidden" name="csNum" value="5">
+                                    <input type="hidden" name="id" value="${u.id}">
                                     <!-- Form -->
                                     <div class="form-group">
 

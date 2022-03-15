@@ -21,10 +21,10 @@ public interface UserMapper {
     boolean deleteUser(String id, String pw);
 
     //회원 수정하기
-    boolean updateUser(ModUser user);
+    void updateUser(ModUser user);
 
-    //회원 정보 받기
-    User getUser();
+    //단일 회원 정보 받기
+    User getUser(String id);
 
     //회원 공지사항 목록 조회
     List<Notice> getNotice();

@@ -1,6 +1,7 @@
 package com.example.springpj.user.controller;
 
 import com.example.springpj.notice.domain.Notice;
+import com.example.springpj.user.domain.LoginFlag;
 import com.example.springpj.user.domain.User;
 import com.example.springpj.user.dto.ModUser;
 import com.example.springpj.user.service.UserService;
@@ -11,7 +12,9 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
+import javax.servlet.http.HttpSession;
 import java.util.List;
 
 
@@ -58,8 +61,8 @@ public class UserController {
 
     //회원의 정보 상세 보기
     @GetMapping("/modify")
-    public String content(Model model) {
-        User user5 = userService.getUser();
+    public String content(Model model, String id) {
+        User user5 = userService.getUser(id);
         model.addAttribute("u",user5);
         log.info("수정 화면 요청!");
         log.info(user5);
@@ -69,7 +72,7 @@ public class UserController {
 
     @PostMapping("/modify")
     public String content(Model model, ModUser user) {
-        User user5 = userService.getUser();
+        User user5 = userService.getUser(user.getPw());
         model.addAttribute("u",user5);
         log.info("수정 요청!");
         userService.updateUser(user);
@@ -86,6 +89,49 @@ public class UserController {
         return "user/notice";
     }
 
+
+    //아이디 중복확인 비동기 통신 요청
+    @GetMapping("/check")
+    @ResponseBody
+    public boolean check(String checkId) {
+        log.info("비동기 요청 GET! "+ checkId);
+        return userService.isDuplicate(checkId);
+    }
+
+    //회원 로그인 양식 화면 요청
+    @GetMapping("/login")
+    public String loginUser() {
+
+        return "login/login-user";
+    }
+
+    //로그인 검증
+    @PostMapping("/login")
+    public String loginCheck(String id, String pw, Model model, HttpSession session) {
+        log.info("loginCheck -- POST! ");
+        log.info("ID: "+ id, "PW: " +pw);
+        LoginFlag flag = userService.login(id, pw);
+        log.info(flag);
+        model.addAttribute("msg",flag);
+
+
+        //로그인 성공시
+        if (flag == LoginFlag.SUCCESS) {
+            session.setAttribute("loginUser", userService.getUser(id));
+            return "user/modify";
+        }
+        return "login/login-user";
+    }
+
+    @GetMapping("/logout")
+    public String logout(HttpSession session) {
+        User user = (User) session.getAttribute("loginUser");
+        if (user!=null) {
+            session.removeAttribute("loginUser");
+            session.invalidate();// 세션 무효화
+        }
+        return "redirect:/main/index";
+    }
 
 
 }//end class

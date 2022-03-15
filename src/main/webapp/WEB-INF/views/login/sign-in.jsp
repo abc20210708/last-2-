@@ -38,7 +38,7 @@
                                 <h2 class="h4">ISEC A/S 로그인</h2>  
                             </div>
                             <div class="card-body">
-                                <form action="/login/sign-in" class="mt-4" method="post">
+                                <form action="/login/user" class="mt-4" method="post">
                                     <!-- Form -->
                               
                                     <div class="form-group">

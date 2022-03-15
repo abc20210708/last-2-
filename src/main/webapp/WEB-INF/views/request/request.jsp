@@ -201,6 +201,8 @@
                                 </div>
                             </div>
                             <form action="/request/request" method="post" class="col-12 col-md-8 mx-auto">
+
+                                <input type="hidden" name="csId" value="${u.csId}">
                                 <!-- Form -->
                                 <div class="form-group">
                                     <label class="my-1 mr-2" for="inlineFormCustomSelectPref">제품명(제품코드)</label>
@@ -225,7 +227,7 @@
                                             
                                             <label for="validationServer01">신청자</label>
                                             <input type="text" class="form-control is-valid" id="validationServer01"
-                                             value=""  name="csId" required >
+                                             value="${u.csId}"  name="csId" required >
                                           
                                         </div>
                                    
@@ -380,7 +382,7 @@
                 const $submitBtn = document.getElementById('submitBtn');
 
                 $submitBtn.onclick = e => {
-                    location.href = '/user/modify';
+                    location.href = '/user/modify?csNum=${u.csNum}';
                 };
 
               

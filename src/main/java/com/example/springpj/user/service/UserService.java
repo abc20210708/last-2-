@@ -1,6 +1,7 @@
 package com.example.springpj.user.service;
 
 import com.example.springpj.notice.domain.Notice;
+import com.example.springpj.user.domain.LoginFlag;
 import com.example.springpj.user.domain.User;
 import com.example.springpj.user.dto.ModUser;
 import com.example.springpj.user.repository.UserMapper;
@@ -9,7 +10,7 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.GetMapping;
+import static com.example.springpj.user.domain.LoginFlag.*;
 
 import java.util.List;
 
@@ -42,8 +43,8 @@ public class UserService {
     }
 
     //회원 정보 받기
-    public User getUser() {
-       return  userMapper.getUser();
+    public User getUser(String id) {
+       return  userMapper.getUser(id);
     }
 
     //공지사항 목록 중간처리
@@ -59,6 +60,17 @@ public class UserService {
     }
 
     //로그인 중간처리
+    public LoginFlag login(String id, String password) {
+        User user = userMapper.getUser(id);
+        if (user != null) {
+            String dbPw = user.getPw();
+            BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
+            return encoder.matches(password,dbPw) ? SUCCESS : NO_PW;
+        } else {
+            return NO_ID;
+        }
+    }
+
 
 
 }//end class

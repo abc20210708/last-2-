@@ -24,8 +24,9 @@ public class RequestController {
 
     //AS 신청 요청 - 화면
     @GetMapping("/request")
-    public String write() {
+    public String write(Request request, Model model) {
         log.info("AS 신청 화면 요청! GET!");
+        model.addAttribute("u",request.getCsId());
         return "request/request";
     }
 
