@@ -14,6 +14,7 @@ import java.sql.SQLException;
 
 public class ModUser {
 
+    private String id;
     private String pw;
     private String address;
     private int postalCode;

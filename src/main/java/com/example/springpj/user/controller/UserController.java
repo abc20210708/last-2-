@@ -66,17 +66,18 @@ public class UserController {
         model.addAttribute("u",loginUser);
         log.info("수정 화면 요청!");
         log.info(loginUser);
-        return "user/modify";
+        return  "user/modify";
     }
 
     @PostMapping("/modify")
-    public String content(Model model,User user, ModUser modUser) {
-        User loginUser = userService.getUser(user.getPw());
+    public String content(Model model, ModUser modUser) {
+        User loginUser = userService.getUser(modUser.getId());
         model.addAttribute("u",loginUser);
         log.info("수정 요청!");
         userService.updateUser(modUser);
-        log.info(user);
-        return "redirect:/user/modify";
+        log.info(loginUser);
+        log.info(modUser);
+        return "redirect:/user/modify?id="+loginUser.getId();
     }
 
     //공지사항 요청 화면
