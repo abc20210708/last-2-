@@ -29,6 +29,9 @@ public interface UserMapper {
     //회원 공지사항 목록 조회
     List<Notice> getNotice();
 
+    //아이디 중복 체크
+    int isDuplicate(String targetKeyword);
+
 
 
 }

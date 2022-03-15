@@ -13,17 +13,21 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 public class LoginController {
 
+    //관리자 로그인 양식 화면 요청
     @GetMapping("/admin")
     public String loginAdmin() {
 
         return "login/login-admin";
     }
 
+    //회원 로그인 양식 화면 요청
     @GetMapping("/user")
     public String loginUser() {
 
         return "login/login-user";
     }
+
+    //
 
 
 }//end class

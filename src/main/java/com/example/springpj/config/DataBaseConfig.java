@@ -8,10 +8,12 @@ import org.springframework.context.annotation.Configuration;
 
 import javax.sql.DataSource;
 
+//DB 관련 설정을 세팅하는 클래스
 @Configuration
 @ComponentScan(basePackages = "com.example.springpj")
 public class DataBaseConfig {
 
+    //DB 접속 정보 설정 (Datasource 설정)
     @Bean
     public DataSource dataSource() {
         //커넥션 풀: 연결객체를 풀에 담아두고 재활용

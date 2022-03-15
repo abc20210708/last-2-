@@ -7,6 +7,7 @@ import com.example.springpj.user.repository.UserMapper;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.GetMapping;
 
@@ -21,6 +22,11 @@ public class UserService {
 
     //회원 가입 중간 처리
     public boolean write(User user) {
+
+        BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
+        String encodedPw = encoder.encode(user.getPw());
+        user.setPw(encodedPw);
+
         return userMapper.createUser(user);
     }
 
@@ -46,5 +52,13 @@ public class UserService {
 
         return articles;
     }
+
+    //아이디 중복확인 중간처리
+    public boolean isDuplicate(String checkId) {
+        return userMapper.isDuplicate(checkId) == 1;
+    }
+
+    //로그인 중간처리
+
 
 }//end class
