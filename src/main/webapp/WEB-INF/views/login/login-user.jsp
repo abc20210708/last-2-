@@ -42,7 +42,7 @@
                                     <!-- Form -->
 
                                      <!-- 사용자 몰래 보내기 -->
-                                    <!-- <input type="hidden" name="id" value="${id}"> -->
+                                    <!-- <input type="hidden" name="id" value="${id}">  -->
 
 
                                     <div class="form-group">
@@ -118,11 +118,11 @@
 
     <script>
         // 로그인 버튼
-      //  const $loginBtn = document.getElementById('loginBtn');
-
-     //   $loginBtn.onclick = e => {
-       //     location.href = '/user/modify';
-        //};
+        // const $loginBtn = document.getElementById('loginBtn');
+            
+        //         $loginBtn.onclick = e => {
+        //         location.href = '/user/modify?id=${id}';
+        //         };
 
         const msg = '${msg}';
         if (msg === 'NO_ID') {

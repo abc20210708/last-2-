@@ -112,12 +112,12 @@ public class UserController {
         LoginFlag flag = userService.login(id, pw);
         log.info(flag);
         model.addAttribute("msg",flag);
-
+        model.addAttribute("id",id);
 
         //로그인 성공시
         if (flag == LoginFlag.SUCCESS) {
             session.setAttribute("loginUser", userService.getUser(id));
-            return "user/modify";
+            return "redirect:/user/modify?id="+id;
         }
         return "login/login-user";
     }
