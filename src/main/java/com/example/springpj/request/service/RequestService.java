@@ -23,6 +23,11 @@ public class RequestService {
         return requestMapper.insertRequest(request);
     }
 
+    //AS 신청자 중간처리
+    public User requestUser() {
+        return requestMapper.requestUser();
+    }
+
 
 
 

@@ -224,11 +224,11 @@
                                         <!-- Form -->
                                     
                                         <div class="form-group">
-                                            
+                                           
                                             <label for="validationServer01">신청자</label>
                                             <input type="text" class="form-control is-valid" id="validationServer01"
-                                             value="${u.csId}"  name="csId" required >
-                                          
+                                             value="${u.csId}" name="csId" required >
+                                           
                                         </div>
                                    
                                     </div>
@@ -382,7 +382,7 @@
                 const $submitBtn = document.getElementById('submitBtn');
 
                 $submitBtn.onclick = e => {
-                    location.href = '/user/modify?csNum=${u.csNum}';
+                    location.href = '/user/modify?id=${u.id}';
                 };
 
               

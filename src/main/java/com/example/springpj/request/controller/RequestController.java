@@ -26,8 +26,8 @@ public class RequestController {
     @GetMapping("/request")
     public String write(Request request, Model model) {
         log.info("AS 신청 화면 요청! GET!");
-        model.addAttribute("u",request.getCsId());
-        return "request/request";
+        model.addAttribute("u",request);
+        return "request/request?csId?="+request.getCsId();
     }
 
     //AS 신청 요청
@@ -35,7 +35,7 @@ public class RequestController {
     public String write(Request request) {
         log.info("AS 신청 요청! ==> POST!" + request);
         requestService.write(request);
-        return  "redirect:/user/modify";
+        return  "redirect:/user/modify?id="+request.getCsId();
     }
 
 

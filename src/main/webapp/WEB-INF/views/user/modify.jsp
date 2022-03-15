@@ -201,7 +201,7 @@
                                                             class="fas fa-unlock-alt"></span></span>
                                                 </div>
                                                 <input class="form-control" id="exampleInputPassword7" name="pw"
-                                                    value="${u.pw}" type="password" aria-label="Password" 
+                                                    value="${u.pw}" maxlength='10' type="password" aria-label="Password" 
                                                     required>
                                             </div>
                                         </div>
@@ -215,12 +215,12 @@
                                                             class="fas fa-unlock-alt"></span></span>
                                                 </div>
                                                 <input class="form-control" id="exampleConfirmPassword7" value="${u.pw}"
-                                                    type="password" aria-label="Password"  required>
+                                                    type="password"  maxlength='10' aria-label="Password"  required>
                                             </div>
                                         </div>
                                         <!-- End of Form -->
                                     </div>
-                                    <button type="submit" id="modBtn" class="btn btn-block btn-primary">정보 수정</button>
+                                    <button type="submit" id="modBtn" onclick="alert('${u.name}님의 정보가 정상적으로 변경되었습니다 :)')" class="btn btn-block btn-primary">정보 수정</button>
                                 </form>
                             </div>
                         </div>
