@@ -45,10 +45,6 @@ public class UserService {
 
     //회원 정보 받기
     public User getUser(String id) {
-        User user = getUser(id);
-
-        for (String pw: User)
-
 
        return  userMapper.getUser(id);
     }

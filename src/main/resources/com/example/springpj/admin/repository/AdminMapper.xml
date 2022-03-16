@@ -52,7 +52,7 @@
 
     <!-- AS 목록 조회   -->
     <select id="getRequestList" resultMap="requestMap">
-        SELECT * FROM as_apply
+        SELECT * FROM as_apply ORDER BY as_date DESC
     </select>
 
 

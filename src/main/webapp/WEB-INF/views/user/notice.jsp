@@ -30,7 +30,7 @@
     <nav id="navbar-main" aria-label="Primary navigation"
          class="navbar navbar-main navbar-expand-lg navbar-theme-primary headroom navbar-light navbar-transparent navbar-theme-primary">
         <div class="container position-relative">
-            <a class="navbar-brand shadow-soft py-2 px-3 rounded border border-light mr-lg-4" href="/home/index">
+            <a class="navbar-brand shadow-soft py-2 px-3 rounded border border-light mr-lg-4" href="/main/index">
                 <img class="navbar-brand-dark" src="/img/italic(blue).png" alt="Logo light">
                 <img class="navbar-brand-light" src="/img/italic(blue).png" alt="Logo dark">
             </a>
