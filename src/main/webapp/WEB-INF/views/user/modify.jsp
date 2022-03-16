@@ -201,8 +201,8 @@
                                                             class="fas fa-unlock-alt"></span></span>
                                                 </div>
                                                 <input class="form-control" id="exampleInputPassword7" name="pw"
-                                                    value="${u.pw}" maxlength='10' type="password" aria-label="Password" 
-                                                    required>
+                                                    value="${u.pw}" maxlength="15" type="password" aria-label="Password" 
+                                                    disabled required>
                                             </div>
                                         </div>
                                         <!-- End of Form -->
@@ -215,7 +215,7 @@
                                                             class="fas fa-unlock-alt"></span></span>
                                                 </div>
                                                 <input class="form-control" id="exampleConfirmPassword7" value="${u.pw}"
-                                                    type="password"  maxlength='10' aria-label="Password"  required>
+                                                    type="password"  aria-label="Password"  disabled required>
                                             </div>
                                         </div>
                                         <!-- End of Form -->
