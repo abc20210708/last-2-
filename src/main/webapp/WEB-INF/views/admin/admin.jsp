@@ -236,12 +236,12 @@
                                             <th class="border-0" scope="col">날짜</th>
                                         </tr>
                                         <c:forEach var="a" items="${notice}">
-                                            <tr>
-                                                <th>${a.bno}</th>
-                                                <th>
+                                            <tr class="text-center "">
+                                                <th >${a.bno}</th>
+                                                <th >
                                                         ${a.title}
                                                     <c:if test="${a.newFlag}">
-                                                        <span class="badge rounded-pill bg-danger">new</span>
+                                                        <span class="badge rounded-pill bg-danger ">new</span>
                                                     </c:if>
                                                 </th>
                                                 <th>

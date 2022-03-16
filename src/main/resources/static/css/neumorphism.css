@@ -16508,6 +16508,8 @@ button.bg-slack:focus {
     text-align: center !important;
 }
 
+
+
 @media (min-width: 576px) {
     .text-sm-left {
         text-align: left !important;
@@ -22091,6 +22093,10 @@ button.section-slack:focus {
 }
 
 .text-center {
+    text-align: center !important;
+}
+
+.text-info {
     text-align: center !important;
 }
 
