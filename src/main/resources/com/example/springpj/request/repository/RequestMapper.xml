@@ -9,21 +9,26 @@
 
     <!-- AS 신청    -->
     <insert id="insertRequest">
-        INSERT INTO as_apply (as_num, cs_id, product_name, amount, as_choice, as_comment)
+        INSERT INTO
+        as_apply
+            (as_num, cs_id, product_name, amount, as_choice, as_comment)
         VALUES
-        (seq_as_apply.nextval, #{csId}, #{productName}, #{amount}, #{asChoice}, #{asComment})
+            (seq_as_apply.nextval, #{csId}, #{productName}, #{amount}, #{asChoice}, #{asComment})
     </insert>
 
-    <!--  회원 목록 조회    -->
-    <resultMap id="userMap" type="com.example.springpj.user.domain.User">
-        <result property="id" column="cs_id" />
-        <result property="name" column="cs_name" />
-        <result property="csNum" column="cs_num" />
-        <result property="postalCode" column="postal_code" />
+
+    <!--   조회    -->
+    <resultMap id="requestMap" type="com.example.springpj.request.domain.Request">
+        <result property="asNum" column="as_num" />
+        <result property="csId" column="cs_id" />
+        <result property="productName" column="product_name" />
+        <result property="asChoice" column="as_choice" />
+        <result property="asComment" column="as_comment" />
+        <result property="asDate" column="as_date" />
     </resultMap>
 
-    <!-- 단일 회원 조회 기능   -->
-    <select id="requestUser" resultMap="userMap">
-        SELECT cs_name FROM cs_user WHERE cs_id = #{id}
-    </select>
+
+
+
+
 </mapper>

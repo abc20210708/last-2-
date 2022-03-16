@@ -35,7 +35,7 @@
                     <div class="navbar-collapse-header">
                         <div class="row">
                             <div class="col-6 collapse-brand">
-                                <a href="./index.html" class="navbar-brand shadow-soft py-2 px-3 rounded border border-light">
+                                <a href="/main/index" class="navbar-brand shadow-soft py-2 px-3 rounded border border-light">
                                     <img src="" alt="Themesberg logo">
                                 </a>
                             </div>
@@ -202,7 +202,7 @@
                             </div>
                             <form action="/request/request" method="post" class="col-12 col-md-8 mx-auto">
 
-                                <input type="hidden" name="csId" value="${u.csId}">
+                                <!-- <input type="hidden" name="csId" value="${u.csId}"> -->
                                 <!-- Form -->
                                 <div class="form-group">
                                     <label class="my-1 mr-2" for="inlineFormCustomSelectPref">제품명(제품코드)</label>
@@ -222,12 +222,14 @@
                                 <div class="col-lg-12 row">
                                     <div class="col-lg-4 col-sm-6">
                                         <!-- Form -->
-                                    
+                                        
+                                
+
                                         <div class="form-group">
                                            
                                             <label for="validationServer01">신청자</label>
                                             <input type="text" class="form-control is-valid" id="validationServer01"
-                                             value="${u.csId}" name="csId" required >
+                                             placeholder="" name="csId"  >
                                            
                                         </div>
                                    
@@ -382,7 +384,7 @@
                 const $submitBtn = document.getElementById('submitBtn');
 
                 $submitBtn.onclick = e => {
-                    location.href = '/user/modify?id=${u.id}';
+                    location.href = '/user/modify?id=${u.csId}';
                 };
 
               

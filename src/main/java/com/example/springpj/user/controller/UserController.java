@@ -1,6 +1,7 @@
 package com.example.springpj.user.controller;
 
 import com.example.springpj.notice.domain.Notice;
+import com.example.springpj.request.domain.Request;
 import com.example.springpj.user.domain.LoginFlag;
 import com.example.springpj.user.domain.User;
 import com.example.springpj.user.dto.ModUser;
@@ -14,7 +15,10 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import javax.servlet.http.Cookie;
+import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import java.io.IOException;
 import java.util.List;
 
 
@@ -107,13 +111,14 @@ public class UserController {
 
     //로그인 검증
     @PostMapping("/login")
-    public String loginCheck(String id, String pw, Model model, HttpSession session) {
+    public String loginCheck(String id, String pw, Model model,
+                             HttpSession session, HttpServletResponse response) throws IOException {
         log.info("loginCheck -- POST! ");
         log.info("ID: "+ id, "PW: " +pw);
         LoginFlag flag = userService.login(id, pw);
         log.info(flag);
         model.addAttribute("msg",flag);
-        model.addAttribute("id",id);
+        model.addAttribute("u",id);
 
         //로그인 성공시
         if (flag == LoginFlag.SUCCESS) {
@@ -122,6 +127,8 @@ public class UserController {
         }
         return "login/login-user";
     }
+
+
 
     @GetMapping("/logout")
     public String logout(HttpSession session) {
@@ -132,6 +139,7 @@ public class UserController {
         }
         return "redirect:/main/index";
     }
+
 
 
 }//end class

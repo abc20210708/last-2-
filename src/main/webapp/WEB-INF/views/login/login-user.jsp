@@ -123,14 +123,12 @@
         //         $loginBtn.onclick = e => {
         //         location.href = '/user/modify?id=${id}';
         //         };
-
         const msg = '${msg}';
         if (msg === 'NO_ID') {
             alert('회원가입된 아이디가 아닙니다!');
         } else if (msg === 'NO_PW') {
             alert('비밀번호가 틀렸습니다!');
         }
-
         
     </script>
 
