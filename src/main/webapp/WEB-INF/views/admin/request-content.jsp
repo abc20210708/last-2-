@@ -28,7 +28,7 @@
     <header class="header-global">
         <nav id="navbar-main" aria-label="Primary navigation" class="navbar navbar-main navbar-expand-lg navbar-theme-primary headroom navbar-light navbar-transparent navbar-theme-primary">
             <div class="container position-relative">
-                <a class="navbar-brand shadow-soft py-2 px-3 rounded border border-light mr-lg-4" href="/index.html">
+                <a class="navbar-brand shadow-soft py-2 px-3 rounded border border-light mr-lg-4" href="/main/index">
                     <img class="navbar-brand-dark" src="/img/italic(blue).png" alt="Logo light">
                     <img class="navbar-brand-light" src="/img/italic(blue).png" alt="Logo dark">
                 </a>
@@ -73,7 +73,7 @@
                                     </div>
                                     <div class="col pl-0">
                                         <ul class="list-style-none">
-                                            <li><a class="dropdown-item" href="#">카드뉴스</a></li>
+                                            <li><a class="dropdown-item" href="/main/news">카드뉴스</a></li>
                                             <li><a class="dropdown-item" href="#">제품문제해결</a></li>
                                             <li><a class="dropdown-item" href="#">서비스뉴스</a></li>
                                         </ul>
@@ -82,7 +82,7 @@
                                         <ul class="list-style-none">
                                             <li><a class="dropdown-item" href="#">요금/보증안내</a></li>
                                             <li><a class="dropdown-item" href="#">칭찬합니다</a></li>
-                                            <li><a class="dropdown-item" href="#">매장찾기</a></li>
+                                            <li><a class="dropdown-item" href="/main/map">매장찾기</a></li>
                                         </ul>
                                     </div>
                                     <div class="col pl-0">

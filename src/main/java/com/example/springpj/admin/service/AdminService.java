@@ -1,6 +1,7 @@
 package com.example.springpj.admin.service;
 
 import com.example.springpj.admin.domain.Admin;
+import com.example.springpj.admin.domain.LoginFlag;
 import com.example.springpj.admin.repository.AdminMapper;
 import com.example.springpj.notice.domain.Notice;
 import com.example.springpj.notice.dto.ModNotice;
@@ -8,6 +9,7 @@ import com.example.springpj.request.domain.Request;
 import com.example.springpj.user.domain.User;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -21,14 +23,23 @@ public class AdminService {
 
     private final AdminMapper adminMapper;
 
-    //관리자 조회 중간 처리
+    //관리자 목록 조회 중간 처리
     public List<Admin> getList() {
         log.info("관리자 조회 중간처리!");
         return adminMapper.getAdminList();
     }
 
+    //관리자 정보 받기
+    public Admin getAdmin(String id) {
+        return adminMapper.getAdmin(id);
+    }
+
     //관리자 등록 중간처리
     public boolean write(Admin admin) {
+
+        BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
+        String encodedPw = encoder.encode(admin.getAdminPw());
+        admin.setAdminPw(encodedPw);
         log.info("관리자 등록 중간처리");
         return adminMapper.createAdmin(admin);
     }
@@ -85,7 +96,16 @@ public class AdminService {
         return true;
     }
 
-
-
+    //관리자 로그인 중간처리
+    public LoginFlag login(String id, String pw) {
+        Admin admin = adminMapper.getAdmin(id);
+        if (admin != null){
+            String dbPw = admin.getAdminPw();
+            BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
+            return encoder.matches(pw, dbPw) ? LoginFlag.SUCCESS : LoginFlag.NO_PW;
+        } else {
+            return LoginFlag.NO_ID;
+        }
+    }
 
 }//end class

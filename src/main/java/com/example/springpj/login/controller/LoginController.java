@@ -22,12 +22,6 @@ public class LoginController {
 
 
 
-    //관리자 로그인 양식 화면 요청
-    @GetMapping("/admin")
-    public String loginAdmin() {
-
-        return "login/login-admin";
-    }
 
 
 

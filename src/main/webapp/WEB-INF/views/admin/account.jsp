@@ -1,3 +1,4 @@
+
 <%@ page contentType="text/html; charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
@@ -5,64 +6,123 @@
 <!DOCTYPE html>
 <html lang="ko">
 
-
-
 <head>
-    <div class="wrap">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>A/S WebSite</title>
+    <!-- Fontawesome -->
+    <link type="text/css" href="/vendor/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
 
-        <div class="btn-group btn-group-lg custom-btn-group" role="group">
+    <!-- Pixel CSS -->
+    <link type="text/css" href="/css/neumorphism.css" rel="stylesheet">
 
-            <h1>관리자 등록하기</h1>
+    <!-- Core -->
+    <script src="/vendor/jquery/dist/jquery.min.js" defer></script>
+    <script src="/vendor/popper.js/dist/umd/popper.min.js" defer></script>
+    <script src="/vendor/bootstrap/dist/js/bootstrap.min.js" defer></script>
+    <script src="/vendor/headroom.js/dist/headroom.min.js" defer></script>
 
-            <div class="write-container">
+    <!-- Neumorphism JS -->
+    <script src="/js/neumorphism.js" defer></script>
+</head>
 
-                <form action="/admin/account" method="post" autocomplete="off">
-
-                   
-
-                    <div class="mb-3">
-                        <label for="exampleFormControlInput1" class="form-label">아이디</label>
-                        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="아이디를 입력해주세요"
-                            name="adminId">
+<body>
+    <main>
+        <!-- Section -->
+        <section class="min-vh-100 mt-5 mb-5 d-flex bg-primary align-items-center">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-12 col-md-8 col-lg-6 justify-content-center">
+                        <div class="card bg-primary shadow-soft border-light p-4">
+                            <div class="card-header text-center pb-0">
+                                <h2 class="mb-0 h5">관리자 등록하기</h2>                               
+                            </div>
+                            <div class="card-body">
+                                <form action="/admin/account" method="post">
+                                    <!-- Form -->
+                                    <div class="form-group">
+                                        <label for="exampleInputIcon4">아이디(ID)</label>
+                                        <div class="input-group mb-4">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text"><span class="fas fa-user"></span></span>
+                                            </div>
+                                            <input class="form-control" id="exampleInputIcon4" 
+                                            name="adminId" placeholder="ID를 입력하세요." type="text">
+                                        </div>
+                                    </div>
+                                    <!-- End of Form -->
+                                    <div class="form-group">
+                                        <!-- Form -->
+                                        <div class="form-group">
+                                            <label for="exampleInputPassword7">Password</label>
+                                            <div class="input-group mb-4">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text"><span class="fas fa-unlock-alt"></span></span>
+                                                </div>
+                                                <input class="form-control" id="exampleInputPassword7"
+                                                 placeholder="Password" type="password" aria-label="Password" 
+                                                 name="adminPw"
+                                                 required>
+                                            </div>
+                                        </div>
+                                        <!-- End of Form -->
+                                        <!-- Form -->
+                                        <div class="form-group">
+                                            <label for="exampleConfirmPassword7">Confirm Password</label>
+                                            <div class="input-group">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text"><span class="fas fa-unlock-alt"></span></span>
+                                                </div>
+                                                <input class="form-control" id="exampleConfirmPassword7" placeholder="Confirm password" 
+                                                type="password" aria-label="Password" required>
+                                            </div>
+                                        </div>
+                                        <!-- End of Form -->
+                                        
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputIcon4">관리자 권한</label>
+                                        <div class="input-group mb-4">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text"><span class="fas fa-signature"></span></span>
+                                            </div>
+                                            <input class="form-control" id="exampleInputIcon4" name="grade"
+                                             placeholder="ex) 1 ~ 5까지 입력하세요" type="text">
+                                        </div>
+                                    </div>
+                                  
+                                            <!-- End of Radio -->
+                                        </fieldset>
+                                    </div>
+                                    <div class="form-check mb-4">
+                                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck6">
+                                        <label class="form-check-label" for="defaultCheck6">
+                                            <a href="#">이용약관 및 개인정보처리방침</a>에 동의합니다.
+                                        </label>
+                                    </div>
+                                    <button type="submit" class="btn btn-block btn-primary">관리자 등록하기</button>
+                                </form>
+                               
+                                <div class="btn-wrapper my-4 text-center">
+                                    <button class="btn btn-primary btn-icon-only text-facebook mr-2" type="button" aria-label="facebook button" title="facebook button">
+                                        <span aria-hidden="true" class="fab fa-facebook-f"></span>
+                                    </button>
+                                    <button class="btn btn-primary btn-icon-only text-twitter mr-2" type="button" aria-label="twitter button" title="twitter button">
+                                        <span aria-hidden="true" class="fab fa-twitter"></span>
+                                    </button>
+                                    <button class="btn btn-primary btn-icon-only text-facebook" type="button" aria-label="github button" title="github button">
+                                        <span aria-hidden="true" class="fab fa-github"></span>
+                                    </button>
+                                </div>
+                                
+                            </div>
+                        </div>
                     </div>
-                    <div class="mb-3">
-                        <label for="exampleFormControlInput2" class="form-label">비밀번호</label>
-                        <input type="password" class="form-control" id="exampleFormControlInput2" placeholder="비밀번호를 입력해주세요"
-                            name="adminPw">
-                    </div>
-                   
-                    <div class="mb-3">
-                        <label for="exampleFormControlInput2" class="form-label">관리자 권한</label>
-                        <input type="text" laceholder="ex) 1 ~ 5까지 입력하세요" name="grade">
-                    </div>
-                
-                       
-                  
-                    
-                    
-
-
-
-                    <div class="d-grid gap-2">
-                        <button class="btn btn-dark" type="submit">관리자 등록하기</button>
-                        <button id="to-list" class="btn btn-warning" type="button">홈으로</button>
-                    </div>
-
-                    
-
-                </form>
-
+                </div>
             </div>
+        </section>
+    </main>
+</body>
 
-        </div>
-
-    </div>
-
-
-    <script>
-        //목록버튼 이벤트
-        const $toList = document.getElementById('to-list');
-        $toList.onclick = e => {
-            location.href = '/main/index';
-        };
-    </script>
+</html>

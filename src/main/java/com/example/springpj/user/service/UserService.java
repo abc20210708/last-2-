@@ -59,7 +59,7 @@ public class UserService {
         return userMapper.isDuplicate(checkId) == 1;
     }
 
-    //로그인 중간처리
+    //회원 로그인 중간처리
     public LoginFlag login(String id, String password) {
         User user = userMapper.getUser(id);
         if (user != null) {

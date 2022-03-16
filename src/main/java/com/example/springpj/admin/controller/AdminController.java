@@ -2,6 +2,7 @@ package com.example.springpj.admin.controller;
 
 
 import com.example.springpj.admin.domain.Admin;
+import com.example.springpj.admin.domain.LoginFlag;
 import com.example.springpj.admin.service.AdminService;
 import com.example.springpj.notice.domain.Notice;
 import com.example.springpj.request.domain.Request;
@@ -14,7 +15,11 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+import java.io.IOException;
 import java.util.List;
+import static com.example.springpj.admin.domain.LoginFlag.*;
 
 @Controller
 @Log4j2
@@ -90,6 +95,33 @@ public class AdminController {
         model.addAttribute("req",request);
         return "admin/request-content";
     }
+
+    //관리자 로그인 양식 화면 요청
+    @GetMapping("/login")
+    public String loginAdmin() {
+
+        return "login/login-admin";
+    }
+
+    //관리자 로그인 검증
+    @PostMapping("/login")
+    public String loginCheck(String id, String pw, Model model,
+                             HttpSession session, HttpServletResponse response) throws IOException {
+        log.info("loginCheck -- POST! ");
+        log.info("ID: "+ id, "PW: " +pw);
+        LoginFlag flag = adminService.login(id, pw);
+        log.info(flag);
+        model.addAttribute("msg",flag);
+        model.addAttribute("u",id);
+
+        //회원 로그인 성공시
+        if (flag == SUCCESS) {
+            session.setAttribute("loginAdmin", adminService.getAdmin(id));
+            return "admin/admin";
+        }
+        return "login/login-admin";
+    }
+
 
 
 

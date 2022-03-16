@@ -38,7 +38,7 @@
                                 <h2 class="h4">ISEC A/S 관리자 로그인</h2>  
                             </div>
                             <div class="card-body">
-                                <!-- <form action="#" class="mt-4" method="get"> -->
+                                <form action="/admin/login" class="mt-4" method="get">
                                     <!-- Form -->
                               
                                     <div class="form-group">
@@ -47,7 +47,7 @@
                                             <div class="input-group-prepend">
                                                 <span class="input-group-text"><span class="fas fa-user"></span></span>
                                             </div>
-                                            <input class="form-control" id="exampleInputIcon3" name="id" placeholder="아이디(ID)를 입력하세요" type="text" required>
+                                            <input class="form-control" id="exampleInputIcon3" name="adminId" placeholder="아이디(ID)를 입력하세요" type="text" required>
                                         </div>
                                     </div>
                                     <!-- End of Form -->
@@ -59,7 +59,7 @@
                                                 <div class="input-group-prepend">
                                                     <span class="input-group-text"><span class="fas fa-unlock-alt"></span></span>
                                                 </div>
-                                                <input class="form-control" id="exampleInputPassword6" name="pw" placeholder="비밀번호를 입력하세요" type="password" required>
+                                                <input class="form-control" id="exampleInputPassword6" name="adminPw" placeholder="비밀번호를 입력하세요" type="password" required>
                                             </div>
                                         </div>
                                         <!-- End of Form -->
@@ -77,7 +77,7 @@
                                   
                                    
 
-                                <!-- </form> -->
+                                </form>
                                 <div class="mt-3 mb-4 text-center">
                                     <span class="font-weight-normal">or login with</span>
                                 </div>
@@ -92,12 +92,7 @@
                                         <span aria-hidden="true" class="fab fa-github"></span>
                                     </button>
                                 </div>
-                                <div class="d-block d-sm-flex justify-content-center align-items-center mt-4">
-                                    <span class="font-weight-normal">
-                                        아직 계정 생성을 하지 않으셨나요?
-                                        <a href="/user/account" class="font-weight-bold">계정 만들기</a>
-                                    </span>
-                                </div>
+                              
                             </div>
                         </div>
                     </div>
@@ -113,6 +108,13 @@
             location.href = '/admin/list';
         };
     
+        const msg = '${msg}';
+        if (msg === 'NO_ID') {
+            alert('회원가입된 아이디가 아닙니다!');
+        } else if (msg === 'NO_PW') {
+            alert('비밀번호가 틀렸습니다!');
+        }
+
         </script>
 </body>
 

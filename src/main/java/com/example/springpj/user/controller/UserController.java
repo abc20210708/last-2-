@@ -109,7 +109,7 @@ public class UserController {
         return "login/login-user";
     }
 
-    //로그인 검증
+    //회원 로그인 검증
     @PostMapping("/login")
     public String loginCheck(String id, String pw, Model model,
                              HttpSession session, HttpServletResponse response) throws IOException {
@@ -120,7 +120,7 @@ public class UserController {
         model.addAttribute("msg",flag);
         model.addAttribute("u",id);
 
-        //로그인 성공시
+        //회원 로그인 성공시
         if (flag == LoginFlag.SUCCESS) {
             session.setAttribute("loginUser", userService.getUser(id));
             return "redirect:/user/modify?id="+id;

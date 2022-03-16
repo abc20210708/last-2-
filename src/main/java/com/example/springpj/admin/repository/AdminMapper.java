@@ -23,6 +23,9 @@ public interface AdminMapper {
     //관리자 목록 전체 조회
     List<Admin> getAdminList();
 
+    //단일 관리자 정보 받기
+    Admin getAdmin(String id);
+
     //회원 목록 조회하기
     List<User> getUserList();
 
