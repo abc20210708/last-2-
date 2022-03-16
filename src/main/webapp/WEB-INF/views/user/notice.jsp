@@ -30,7 +30,7 @@
     <nav id="navbar-main" aria-label="Primary navigation"
          class="navbar navbar-main navbar-expand-lg navbar-theme-primary headroom navbar-light navbar-transparent navbar-theme-primary">
         <div class="container position-relative">
-            <a class="navbar-brand shadow-soft py-2 px-3 rounded border border-light mr-lg-4" href="/user/modify">
+            <a class="navbar-brand shadow-soft py-2 px-3 rounded border border-light mr-lg-4" href="/home/index">
                 <img class="navbar-brand-dark" src="/img/italic(blue).png" alt="Logo light">
                 <img class="navbar-brand-light" src="/img/italic(blue).png" alt="Logo dark">
             </a>
@@ -158,20 +158,9 @@
                     <!-- Tab Nav -->
                     <div class="nav-wrapper position-relative mb-4">
                         <ul class="nav nav-pills flex-column flex-sm-row" id="tabs-text" role="tablist">
-                            <!-- <li class="nav-item mr-sm-3 mr-md-0">
+                            <li class="nav-item mr-sm-3 mr-md-0">
                                 <a class="nav-link mb-sm-3 mb-md-0 active" id="tabs-text-1-tab" data-toggle="tab"
-                                   href="#tabs-text-1" role="tab" aria-controls="tabs-text-1" aria-selected="true">회원
-                                    정보</a>
-                            </li>
-                            <li class="nav-item mr-sm-3 mr-md-0">
-                                <a class="nav-link mb-sm-3 mb-md-0" id="tabs-text-2-tab" data-toggle="tab"
-                                   href="#tabs-text-2" role="tab" aria-controls="tabs-text-2" aria-selected="false">A/S
-                                    현황</a>
-                            </li> -->
-                            <li class="nav-item mr-sm-3 mr-md-0">
-                                <a class="nav-link mb-sm-3 mb-md-0" id="tabs-text-3-tab" data-toggle="tab"
-                                   href="#tabs-text-3" role="tab" aria-controls="tabs-text-3"
-                                   aria-selected="false">공지사항</a>
+                                   href="#tabs-text-1" role="tab" aria-controls="tabs-text-1" aria-selected="true">공지사항</a>
                             </li>
                         </ul>
                     </div>
@@ -182,53 +171,8 @@
                             <div class="tab-content" id="tabcontent1">
                                 <div class="tab-pane fade show active" id="tabs-text-1" role="tabpanel"
                                      aria-labelledby="tabs-text-1-tab">
-                                    <!-- <table class="table shadow-soft rounded articles">
-                                        <tr class="text-center text-info">
-                                            <th class="border-0" scope="col">번호</th>
-                                            <th class="border-0" scope="col">아이디</th>
-                                            <th class="border-0" scope="col">이름</th>
-                                            <th class="border-0" scope="col">연락처</th>
-                                            <th class="border-0" scope="col">성별</th>
-                                        </tr>
-
-                                        <c:forEach var="cs" items="${cs}">
-                                            <tr class="text-center">
-                                                <th scope="col">${cs.csNum}</th>
-                                                <th scope="col">${cs.id}</th>
-                                                <th scope="col">${cs.name}</th>
-                                                <th scope="col">${cs.phone}</th>
-                                                <th scope="col">${cs.gender}</th>
-                                            </tr>
-                                        </c:forEach>
-                                    </table>
-                                </div>
-                                <div class="tab-pane fade" id="tabs-text-2" role="tabpanel"
-                                     aria-labelledby="tabs-text-2-tab">
-                                    <table class="table shadow-soft rounded articles2">
-                                        <tr class="text-center text-info">
-                                            <th class="border-0" scope="col">신청코드</th>
-                                            <th class="border-0" scope="col">제품명</th>
-                                            <th class="border-0" scope="col">회원아이디</th>
-                                            <th class="border-0" scope="col">방문선택</th>
-                                            <th class="border-0" scope="col">신청일자</th>
-                                        </tr>
-                                        <c:forEach var="req" items="${req}">
-                                            <tr class="text-center">
-                                                <th scope="col">${req.asNum}</th>
-                                                <th scope="col">${req.productName}</th>
-                                                <th scope="col">${req.csId}</th>
-                                                <th scope="col">${req.asChoice}</th>
-                                                <th scope="col">${req.asDate}</th>
-                                            </tr>
-                                        </c:forEach>
-                                    </table>
-                                </div> -->
-                                <div class="tab-pane fade" id="tabs-text-3" role="tabpanel"
-                                     aria-labelledby="tabs-text-3-tab">
-                                     <!-- <button class="btn btn-primary mb-3 float-right text-danger" type="button"  onclick="location.href='/notice/write' ">
-                                        <span class="mr-1"><span class="far fa-edit"></span></span>
-                                        글쓰기
-                                    </button> -->
+                                
+                                    
                                     <table class="table shadow-soft rounded notice">
                                         <tr class="text-center text-info">
                                             <th class="border-0" scope="col">글번호</th>
@@ -236,7 +180,7 @@
                                             <th class="border-0" scope="col">날짜</th>
                                         </tr>
                                         <c:forEach var="a" items="${notice}">
-                                            <tr>
+                                            <tr class="text-center">
                                                 <th>${a.bno}</th>
                                                 <th>
                                                         ${a.title}
