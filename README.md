@@ -23,7 +23,7 @@ https://www.erdcloud.com/d/ZvAH758GBJZq9YvpE
  
  
  <p align=center>
--로그인에 성공하면 회원정보 
+-로그인에 성공하면 회원정보 목록
 </p> <br><br><br><br>
 
 <p align=center> 
