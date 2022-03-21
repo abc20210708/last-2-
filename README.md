@@ -1,6 +1,8 @@
 # 팀 프로젝트
 [스프링 프로젝트 발표(1차).pdf](https://github.com/abc20210708/last-2-/files/8262141/1.pdf)
 
+# DB 설계
+https://www.erdcloud.com/d/ZvAH758GBJZq9YvpE
 
 # 관리자
 <img width="707" alt="20220316_214845" src="https://user-images.githubusercontent.com/87113813/158595494-f9b88397-d332-4408-8143-f6f5583648b8.png">
