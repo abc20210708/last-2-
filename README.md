@@ -10,7 +10,7 @@ https://www.erdcloud.com/d/ZvAH758GBJZq9YvpE
 </p>
  
 <p align=center>
--관리자로 로그인 합니다. #계정 정보 기억하기 구현
+-관리자로 로그인(계정 정보 기억하기 미구현)
 </p> <br><br><br><br>
  
 <p align=center>
