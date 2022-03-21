@@ -7,18 +7,18 @@ https://www.erdcloud.com/d/ZvAH758GBJZq9YvpE
 # 관리자
 <img width="707" alt="20220316_214845" src="https://user-images.githubusercontent.com/87113813/158595494-f9b88397-d332-4408-8143-f6f5583648b8.png">
 
-관리자로 로그인 합니다. #계정 정보 기억하기 구현
+**관리자로 로그인 합니다. #계정 정보 기억하기 구현
 
 <img width="370" alt="20220316_214930" src="https://user-images.githubusercontent.com/87113813/158595620-6e0c2be2-4925-486c-85cf-fe1562f116a8.png">
 
 <img width="708" alt="20220316_215033" src="https://user-images.githubusercontent.com/87113813/158595720-16fea832-6777-4b78-b40c-06063199b769.png">
-로그인에 성공하면 회원정보
+**로그인에 성공하면 회원정보
 
 <img width="316" alt="20220316_215228" src="https://user-images.githubusercontent.com/87113813/158596789-96f01715-8325-4935-8048-b4f1e30e4906.png">
-회원 상세 정보
+**회원 상세 정보
 
 <img width="697" alt="20220316_220642" src="https://user-images.githubusercontent.com/87113813/158596600-111b21e1-862d-4828-b42e-144cc5daad2f.png">
-A/S 현황
+**A/S 현황
 
 <img width="558" alt="20220316_215247" src="https://user-images.githubusercontent.com/87113813/158596908-9b50d083-b2bd-4430-8031-b740eea3fe51.png">
 A/S 현황 상세 정보
