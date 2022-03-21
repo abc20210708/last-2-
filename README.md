@@ -5,6 +5,7 @@
 https://www.erdcloud.com/d/ZvAH758GBJZq9YvpE
 
 # 관리자
+<div align=center>
 <img width="707" alt="20220316_214845" align="center" src="https://user-images.githubusercontent.com/87113813/158595494-f9b88397-d332-4408-8143-f6f5583648b8.png">
 
 -관리자로 로그인 합니다. #계정 정보 기억하기 구현
@@ -66,7 +67,7 @@ https://www.erdcloud.com/d/ZvAH758GBJZq9YvpE
 -카드뉴스
 <img width="385" alt="20220316_222000" src="https://user-images.githubusercontent.com/87113813/158601248-4cc86273-00d2-4c7a-9923-3c77afc5109f.png">
 -매장찾기
-
+ </div>
 
 
 
