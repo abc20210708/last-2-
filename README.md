@@ -10,7 +10,7 @@ https://www.erdcloud.com/d/ZvAH758GBJZq9YvpE
 </p>
  
 <p align=center>
--관리자로 로그인(계정 정보 기억하기 미구현)
+-관리자로 로그인 (계정 정보 기억하기 미구현)
 </p> <br><br><br><br>
  
 <p align=center>
@@ -56,7 +56,7 @@ https://www.erdcloud.com/d/ZvAH758GBJZq9YvpE
  </p>
  
  <p align=center> 
--공지사항
+-공지사항 (부트스트랩)
 </p> <br><br><br><br>
 
 <p align=center> 
@@ -64,7 +64,7 @@ https://www.erdcloud.com/d/ZvAH758GBJZq9YvpE
  </p>
  
 <p align=center> 
--공지사항 등록 #부트스트랩
+-공지사항 등록
 </p> <br><br><br><br>
 
 <p align=center> 
@@ -96,34 +96,91 @@ https://www.erdcloud.com/d/ZvAH758GBJZq9YvpE
 </p> <br><br><br><br>
 
 # 회원
+<p align=center> 
 <img width="364" alt="20220316_215649" src="https://user-images.githubusercontent.com/87113813/158598112-7ddac141-9854-4678-a089-813306792e5e.png">
--회원 로그인 #아이디저장하기 미구현
+</p>
+ 
+<p align=center> 
+-회원 로그인 (아이디저장하기 미구현)
+</p> <br><br><br><br>
 
+<p align=center> 
 <img width="322" alt="20220316_215718" src="https://user-images.githubusercontent.com/87113813/158598255-b418aa1d-0578-48ca-a962-23bc7607aa22.png">
+</p>
+
+<p align=center> 
 <img width="335" alt="20220316_215745" src="https://user-images.githubusercontent.com/87113813/158598266-f0831d4d-76eb-409d-adae-7bb9d9fb75b9.png">
+</p>
+
+<p align=center> 
 <img width="768" alt="20220316_215824" src="https://user-images.githubusercontent.com/87113813/158598298-582a3162-0857-4443-a72a-494ec5865ad4.png">
+</p>
+
+<p align=center> 
 -회원 정보 수정 DB 확인 가능
+</p> <br><br><br><br>
 
+<p align=center> 
 <img width="692" alt="20220316_215847" src="https://user-images.githubusercontent.com/87113813/158598375-5e7302bb-f5b5-4d2f-9581-9cae5b3e8b11.png">
--공지사항 목록 확인가능 #상세정보 미구현
+</p>
 
+<p align=center>  
+-공지사항 목록 확인가능 (상세정보 미구현)
+</p> <br><br><br><br>
+
+<p align=center> 
 <img width="435" alt="20220316_222227" src="https://user-images.githubusercontent.com/87113813/158600695-d58fc7af-dca4-4469-9603-86c51b805e41.png">
+</p>
+
+<p align=center> 
 -A/S신청 
+</p> <br><br><br><br>
 
+<p align=center> 
 <img width="491" alt="20220316_222252" src="https://user-images.githubusercontent.com/87113813/158600812-1b62fb28-3df5-4975-9e43-3e232fecd49a.png">
+</p>
+
+<p align=center>  
 -회원 로그아웃
+</p> <br><br><br><br>
 
+<p align=center>  
 -다시 관리자 로그인
-<img width="713" alt="20220316_222743" src="https://user-images.githubusercontent.com/87113813/158600880-1840e62f-afef-4b15-8ba7-5f88f0efc436.png">
-<img width="449" alt="20220316_222755" src="https://user-images.githubusercontent.com/87113813/158600894-c70b0187-19f8-4f35-9f3e-311d4e2e0cb5.png">
-<img width="858" alt="20220316_223117" src="https://user-images.githubusercontent.com/87113813/158601107-b767b162-5586-497e-8b0f-ff56cf142a3c.png">
--신청 DB 확인 가능
+</p>
 
+<p align=center>  
+<img width="713" alt="20220316_222743" src="https://user-images.githubusercontent.com/87113813/158600880-1840e62f-afef-4b15-8ba7-5f88f0efc436.png">
+</p>
+
+<p align=center>   
+<img width="449" alt="20220316_222755" src="https://user-images.githubusercontent.com/87113813/158600894-c70b0187-19f8-4f35-9f3e-311d4e2e0cb5.png">
+</p>
+
+<p align=center>   
+<img width="858" alt="20220316_223117" src="https://user-images.githubusercontent.com/87113813/158601107-b767b162-5586-497e-8b0f-ff56cf142a3c.png">
+</p> 
+ 
+<p align=center>   
+-신청 DB 확인 가능
+</p> <br><br><br><br> 
+
+<p align=center>   
 <img width="633" alt="20220316_221907" src="https://user-images.githubusercontent.com/87113813/158601234-89a45c0d-a368-4796-8a22-11c64407ff58.png">
+</p>  
+ 
+
+<p align=center>   
 -카드뉴스
+</p> <br><br><br><br> 
+
+<p align=center>  
 <img width="385" alt="20220316_222000" src="https://user-images.githubusercontent.com/87113813/158601248-4cc86273-00d2-4c7a-9923-3c77afc5109f.png">
+</p> 
+ 
+<p align=center>  
 -매장찾기
-</div>
+</p> <br><br><br><br> 
+
 
 
 
