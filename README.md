@@ -11,7 +11,7 @@ https://www.erdcloud.com/d/ZvAH758GBJZq9YvpE
  
 <p align=center>
 -관리자로 로그인 합니다. #계정 정보 기억하기 구현
-</p>
+</p> <br><br><br><br>
  
 <p align=center>
 <img width="370" alt="20220316_214930" src="https://user-images.githubusercontent.com/87113813/158595620-6e0c2be2-4925-486c-85cf-fe1562f116a8.png">
@@ -23,8 +23,8 @@ https://www.erdcloud.com/d/ZvAH758GBJZq9YvpE
  
  
  <p align=center>
--로그인에 성공하면 회원정보
-</p>
+-로그인에 성공하면 회원정보 
+</p> <br><br><br><br>
 
 <p align=center> 
 <img width="316" alt="20220316_215228" src="https://user-images.githubusercontent.com/87113813/158596789-96f01715-8325-4935-8048-b4f1e30e4906.png">
@@ -32,7 +32,7 @@ https://www.erdcloud.com/d/ZvAH758GBJZq9YvpE
  
 <p align=center> 
 -회원 상세 정보
-</p>
+</p> <br><br><br><br>
 
 <p align=center> 
 <img width="697" alt="20220316_220642" src="https://user-images.githubusercontent.com/87113813/158596600-111b21e1-862d-4828-b42e-144cc5daad2f.png">
@@ -40,7 +40,7 @@ https://www.erdcloud.com/d/ZvAH758GBJZq9YvpE
  
  <p align=center> 
 -A/S 현황
- </p>
+ </p> <br><br><br><br>
 
 <p align=center> 
 <img width="558" alt="20220316_215247" src="https://user-images.githubusercontent.com/87113813/158596908-9b50d083-b2bd-4430-8031-b740eea3fe51.png">
@@ -49,12 +49,15 @@ https://www.erdcloud.com/d/ZvAH758GBJZq9YvpE
  
  <p align=center> 
 -A/S 현황 상세 정보
-</p>
+</p> <br><br><br><br>
 
 <p align=center> 
 <img width="706" alt="20220316_215100" src="https://user-images.githubusercontent.com/87113813/158596681-bb4f9c6a-bfe6-4725-bdc0-123da1bb0879.png">
+ </p>
+ 
+ <p align=center> 
 -공지사항
-</p>
+</p> <br><br><br><br>
 
 <p align=center> 
 <img width="516" alt="20220316_215358" src="https://user-images.githubusercontent.com/87113813/158596995-b75339d3-f9cf-4de5-b5aa-d6437e335979.png">
@@ -62,7 +65,7 @@ https://www.erdcloud.com/d/ZvAH758GBJZq9YvpE
  
 <p align=center> 
 -공지사항 등록 #부트스트랩
-</p>
+</p> <br><br><br><br>
 
 <p align=center> 
 <img width="707" alt="20220316_215419" src="https://user-images.githubusercontent.com/87113813/158597212-14237eb5-919e-46f6-81c3-5f653f67327f.png">
@@ -74,7 +77,7 @@ https://www.erdcloud.com/d/ZvAH758GBJZq9YvpE
  
  <p align=center> 
 -DB에서도 확인 가능
-</p>
+</p> <br><br><br><br>
 
 <p align=center> 
 <img width="627" alt="20220316_221306" src="https://user-images.githubusercontent.com/87113813/158597843-c6409a43-389f-4d51-9f84-5331c319d73f.png">
@@ -90,7 +93,7 @@ https://www.erdcloud.com/d/ZvAH758GBJZq9YvpE
  
 <p align=center> 
 -공지사항 수정 DB 확인 가능
-</p>
+</p> <br><br><br><br>
 
 # 회원
 <img width="364" alt="20220316_215649" src="https://user-images.githubusercontent.com/87113813/158598112-7ddac141-9854-4678-a089-813306792e5e.png">
