@@ -19,21 +19,35 @@ https://www.erdcloud.com/d/ZvAH758GBJZq9YvpE
  
 <p align=center>
 <img width="708" alt="20220316_215033" src="https://user-images.githubusercontent.com/87113813/158595720-16fea832-6777-4b78-b40c-06063199b769.png">
+ </p>
+ 
+ 
+ <p align=center>
 -로그인에 성공하면 회원정보
 </p>
 
 <p align=center> 
 <img width="316" alt="20220316_215228" src="https://user-images.githubusercontent.com/87113813/158596789-96f01715-8325-4935-8048-b4f1e30e4906.png">
+ </p>
+ 
+<p align=center> 
 -회원 상세 정보
 </p>
 
 <p align=center> 
 <img width="697" alt="20220316_220642" src="https://user-images.githubusercontent.com/87113813/158596600-111b21e1-862d-4828-b42e-144cc5daad2f.png">
+ </p>
+ 
+ <p align=center> 
 -A/S 현황
-</p>
+ </p>
 
 <p align=center> 
 <img width="558" alt="20220316_215247" src="https://user-images.githubusercontent.com/87113813/158596908-9b50d083-b2bd-4430-8031-b740eea3fe51.png">
+ </p>
+ 
+ 
+ <p align=center> 
 -A/S 현황 상세 정보
 </p>
 
@@ -44,18 +58,33 @@ https://www.erdcloud.com/d/ZvAH758GBJZq9YvpE
 
 <p align=center> 
 <img width="516" alt="20220316_215358" src="https://user-images.githubusercontent.com/87113813/158596995-b75339d3-f9cf-4de5-b5aa-d6437e335979.png">
+ </p>
+ 
+<p align=center> 
 -공지사항 등록 #부트스트랩
 </p>
 
 <p align=center> 
 <img width="707" alt="20220316_215419" src="https://user-images.githubusercontent.com/87113813/158597212-14237eb5-919e-46f6-81c3-5f653f67327f.png">
+ </p>
+ 
+ <p align=center> 
 <img width="832" alt="20220316_215454" src="https://user-images.githubusercontent.com/87113813/158597226-482f5f23-b791-4565-8e38-6a7e9f26ed27.png">
+ </p>
+ 
+ <p align=center> 
 -DB에서도 확인 가능
 </p>
 
 <p align=center> 
 <img width="627" alt="20220316_221306" src="https://user-images.githubusercontent.com/87113813/158597843-c6409a43-389f-4d51-9f84-5331c319d73f.png">
+ </p>
+ 
+ <p align=center> 
 <img width="634" alt="20220316_221326" src="https://user-images.githubusercontent.com/87113813/158597856-fb5e0a76-b102-4cf0-946a-d3651ebfb01d.png">
+ </p>
+ 
+  <p align=center> 
 <img width="786" alt="20220316_221359" src="https://user-images.githubusercontent.com/87113813/158597867-e2fbd18f-a1ee-445d-98b7-e86adae25627.png">
 </p>
  
